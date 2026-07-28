@@ -29,12 +29,12 @@ export const GalleryPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const galleryItems = [
-    { title: "5-Acre Eco Campus", category: "Campus", src: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop" },
-    { title: "Advanced STEM Robotics Lab", category: "Labs", src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" },
-    { title: "Annual Athletic Meet", category: "Sports", src: "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop" },
-    { title: "Inter-House Drama Showcase", category: "Arts", src: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=800&auto=format&fit=crop" },
-    { title: "Digital Audio Visual Library", category: "Campus", src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" },
-    { title: "Student Fine Arts Exhibition", category: "Arts", src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop" }
+    { title: "5-Acre Eco Campus", category: "Campus", src: "https://kisaligarh.com/com%20art/3.png" },
+    { title: "Advanced STEM Robotics Lab", category: "Labs", src: "https://kisaligarh.com/com%20art/1.png" },
+    { title: "Annual Athletic Meet", category: "Sports", src: "https://kisaligarh.com/gallery/new-images/sports-facilities/Badminton.jpg" },
+    { title: "Inter-House Drama Showcase", category: "Arts", src: "	https://kisaligarh.com/programming%20arts/dance.png" },
+    { title: "Digital Audio Visual Library", category: "Campus", src: "https://kisaligarh.com/com%20art/6.png" },
+    { title: "Student Fine Arts Exhibition", category: "Arts", src: "	https://kisaligarh.com/fineart/5.jpg" }
   ];
 
   const categories = ["All", "Campus", "Labs", "Sports", "Arts"];

@@ -24,7 +24,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl p-0.5">
                 <div className="w-full h-full rounded-[10px] flex items-center justify-center">
-                  <img src="https://kisaligarh.com/school_logo/KIS%20Logo.png" className="w-6 h-6" />
+                  <img src="https://kisaligarh.com/school_logo/KIS%20Logo.png" className="w-10 h-10" />
                 </div>
               </div>
               <div className="flex flex-col">
@@ -164,7 +164,7 @@ export const Footer = () => {
                   className="w-16 h-16 bg-white p-1 rounded-xl shrink-0 border border-slate-700 hover:scale-105 transition-transform"
                 >
                   <img
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://krishnaintf.accevate.com/online/main"
+                    src="https://kisaligarh.com/social/qrcode.png"
                     alt="KIS Accevate QR Code"
                     className="w-full h-full object-contain"
                   />
@@ -228,7 +228,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center text-center p-4 space-y-4">
           <div className="p-4 bg-white rounded-2xl shadow-xl">
             <img
-              src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://krishnaintf.accevate.com/online/main"
+              src="https://kisaligarh.com/social/qrcode.png"
               alt="Accevate Portal QR Code"
               className="w-56 h-56 object-contain"
             />

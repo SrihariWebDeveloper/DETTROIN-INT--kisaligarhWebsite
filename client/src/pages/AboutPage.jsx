@@ -44,10 +44,10 @@ export const AboutPage = () => {
 
           <div className="lg:col-span-5 grid grid-cols-2 gap-3">
             {[
-              "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop"
+              "https://kisaligarh.com/Other_images/about_con/new/A%202.jpg",
+              "https://kisaligarh.com/Other_images/about_con/new/A3.jpg",
+              "https://kisaligarh.com/Other_images/about_con/new/A%204..jpg",
+              "	https://kisaligarh.com/Other_images/about_con/new/A%205.jpg"
             ].map((img, idx) => (
               <div key={idx} className="rounded-2xl overflow-hidden aspect-square border border-slate-700">
                 <img src={img} alt={`KIS Facility ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />

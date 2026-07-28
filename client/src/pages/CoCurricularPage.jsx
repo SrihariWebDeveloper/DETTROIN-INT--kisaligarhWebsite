@@ -11,7 +11,7 @@ import { CO_CURRICULAR_ITEMS } from "../data/kisData";
 export const CoCurricularPage = () => {
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "Athletics", "Culture", "Arts", "Exploration", "Social Action"];
+  const categories = ["All", "Athletics", "Culture", "Arts", "Exploration", "Trips"];
 
   const filteredItems = filter === "All" 
     ? CO_CURRICULAR_ITEMS 

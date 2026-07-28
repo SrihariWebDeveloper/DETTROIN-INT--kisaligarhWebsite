@@ -140,25 +140,25 @@ export const CO_CURRICULAR_ITEMS = [
     title: "Sports & Physical Life Skills",
     category: "Athletics",
     desc: "Comprehensive training in Cricket, Football, Basketball, Volleyball, Track & Field, Table Tennis, and Yoga.",
-    image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop"
+    image: "https://kisaligarh.com/gallery/new-images/sports-facilities/Basketball.jpg"
   },
   {
-    title: "Intra-Mural Competitions",
-    category: "Houses",
-    desc: "Inter-house debates, quizzes, science exhibitions, declamations, and creative writing events.",
-    image: "https://images.unsplash.com/photo-1544531585-9847b68c8c86?q=80&w=800&auto=format&fit=crop"
+    title: "Excursions and Trips",
+    category: "Trips",
+    desc: "Embarking on a school excursion is a dynamic journey that extends beyond the confines of the classroom, fostering experiential learning and camaraderie. Our school believes in the transformative power of educational outings, where students not only gain a deeper understanding of the subjects but also cultivate essential life skills.",
+    image: "	https://kisaligarh.com/educationExcursion/e3.jpg"
   },
   {
     title: "Performing Arts & Dramatics",
     category: "Culture",
     desc: "Indian classical music, western vocal harmony, dance forms, theatrical productions, and instrumental training.",
-    image: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=800&auto=format&fit=crop"
+    image: "https://kisaligarh.com/programming%20arts/dance.png"
   },
   {
     title: "Fine Arts & Graphic Crafts",
     category: "Arts",
     desc: "Painting, clay modeling, pottery, digital art, sculpture making, and eco-craft innovations.",
-    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop"
+    image: "https://kisaligarh.com/fineart/5.jpg"
   },
   {
     title: "Excursions & Field Expeditions",
@@ -168,7 +168,7 @@ export const CO_CURRICULAR_ITEMS = [
   },
   {
     title: "Community Engagement & Service",
-    category: "Social Action",
+    category: "Trips",
     desc: "Cleanliness drives, tree plantation initiatives, visits to social organizations, and social responsibility campaigns.",
     image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800&auto=format&fit=crop"
   }
