@@ -22,9 +22,9 @@ export const Footer = () => {
           {/* Brand & Address Column */}
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-lg shadow-emerald-500/20">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-emerald-400" />
+              <div className="w-10 h-10 rounded-xl p-0.5">
+                <div className="w-full h-full rounded-[10px] flex items-center justify-center">
+                  <img src="https://kisaligarh.com/school_logo/KIS%20Logo.png" className="w-6 h-6" />
                 </div>
               </div>
               <div className="flex flex-col">
