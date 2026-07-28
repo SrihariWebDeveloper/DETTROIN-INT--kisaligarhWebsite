@@ -89,38 +89,38 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
       </div>
 
       {/* Floating Main Navbar */}
-      <header className={`sticky top-0 z-40 transition-all duration-300 ${isScrolled ? "py-3 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/80 shadow-2xl shadow-slate-950/50" : "py-4 bg-slate-950/70 backdrop-blur-md border-b border-slate-800/30"}`}>
+      <header className={`sticky top-0 z-40 transition-all duration-300 ${isScrolled ? "py-3 bg-slate-950/95 backdrop-blur-xl border-b border-slate-800/80 shadow-2xl shadow-slate-950/50" : "py-4 bg-slate-950/90 backdrop-blur-lg border-b border-slate-800/50 shadow-md shadow-slate-950/30"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-2">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
+            <Link to="/" className="flex items-center gap-3 group shrink-0">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
                 <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-emerald-400" />
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-emerald-300 transition-colors">
+                <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-emerald-300 transition-colors whitespace-nowrap">
                   Krishna International
                 </span>
-                <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold flex items-center gap-1">
+                <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold flex items-center gap-1 whitespace-nowrap">
                   Aligarh <span className="w-1 h-1 rounded-full bg-emerald-400"></span> CBSE Affiliated
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5">
               {navLinks.map((link) => (
                 <div 
                   key={link.name} 
-                  className="relative"
+                  className="relative shrink-0"
                   onMouseEnter={() => link.submenu && setActiveDropdown(link.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <Link
                     to={link.path}
-                    className={`px-3.5 py-2 text-sm font-medium rounded-full transition-colors flex items-center gap-1 ${
+                    className={`px-2.5 xl:px-3.5 py-2 text-xs xl:text-sm font-medium rounded-full transition-colors flex items-center gap-1 whitespace-nowrap ${
                       location.pathname === link.path 
                         ? "text-emerald-400 bg-emerald-500/10 font-semibold" 
                         : "text-slate-300 hover:text-white hover:bg-white/5"
@@ -139,7 +139,7 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 5, scale: 0.98 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-72 p-2 glass-panel bg-slate-900/95 rounded-2xl border border-slate-800 shadow-2xl z-50"
+                          className="absolute top-full left-0 mt-2 w-72 p-2.5 glass-dropdown rounded-2xl border border-slate-700/80 shadow-2xl shadow-slate-950/90 z-50 bg-slate-950/98"
                         >
                           {link.submenu.map((sub) => (
                             sub.action ? (
@@ -149,25 +149,25 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
                                   sub.action();
                                   setActiveDropdown(null);
                                 }}
-                                className="w-full text-left p-3 rounded-xl hover:bg-slate-800/80 transition-colors group block"
+                                className="w-full text-left p-3 rounded-xl hover:bg-slate-800/90 transition-colors group block"
                               >
-                                <div className="text-sm font-semibold text-slate-200 group-hover:text-emerald-400 transition-colors flex items-center justify-between">
+                                <div className="text-sm font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors flex items-center justify-between">
                                   {sub.title}
-                                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-emerald-400" />
                                 </div>
-                                <div className="text-xs text-slate-400 mt-0.5">{sub.desc}</div>
+                                <div className="text-xs text-slate-300/90 mt-0.5">{sub.desc}</div>
                               </button>
                             ) : (
                               <Link
                                 key={sub.title}
                                 to={sub.href}
                                 onClick={() => setActiveDropdown(null)}
-                                className="p-3 rounded-xl hover:bg-slate-800/80 transition-colors group block"
+                                className="p-3 rounded-xl hover:bg-slate-800/90 transition-colors group block"
                               >
-                                <div className="text-sm font-semibold text-slate-200 group-hover:text-emerald-400 transition-colors">
+                                <div className="text-sm font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors">
                                   {sub.title}
                                 </div>
-                                <div className="text-xs text-slate-400 mt-0.5">{sub.desc}</div>
+                                <div className="text-xs text-slate-300/90 mt-0.5">{sub.desc}</div>
                               </Link>
                             )
                           ))}
@@ -180,12 +180,13 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
             </nav>
 
             {/* Desktop Action Buttons */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
               <Button 
                 variant="glass" 
                 size="sm" 
                 icon={CreditCard}
                 onClick={onOpenFeeModal}
+                className="whitespace-nowrap"
               >
                 Pay Fee
               </Button>
@@ -194,6 +195,7 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
                 size="sm" 
                 icon={UserPlus}
                 onClick={onOpenEnrollModal}
+                className="whitespace-nowrap"
               >
                 Enroll Now
               </Button>
@@ -221,7 +223,7 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed top-[108px] left-0 right-0 z-50 glass-panel bg-slate-950/95 border-b border-slate-800 p-6 overflow-y-auto max-h-[calc(100vh-120px)]"
+            className="lg:hidden fixed top-[108px] left-0 right-0 z-50 bg-slate-950/98 backdrop-blur-2xl border-b border-slate-800/90 p-6 overflow-y-auto max-h-[calc(100vh-120px)] shadow-2xl"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
