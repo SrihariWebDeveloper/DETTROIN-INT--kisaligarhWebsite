@@ -33,7 +33,7 @@ export const KIS_PILLARS = [
     title: "Academics",
     subtitle: "Nurturing Intellectual Curiosity",
     description: "High-quality teaching, state-of-the-art STEM laboratories, comprehensive CBSE curriculum, and interactive learner-centric methodology.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
+    image: "	https://kisaligarh.com/Other_images/new/c.jpg",
     link: "/academics",
     badge: "Core Curriculum"
   },
@@ -42,7 +42,7 @@ export const KIS_PILLARS = [
     title: "Admissions",
     subtitle: "Seamless Gateway to Bright Futures",
     description: "Welcoming students from diverse backgrounds with transparent guidelines, digital fee payment, and holistic student onboarding.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    image: "https://kisaligarh.com/Other_images/new/a.jpg",
     link: "/admissions",
     badge: "Open 2026-27"
   },
@@ -51,18 +51,18 @@ export const KIS_PILLARS = [
     title: "Co-Curricular",
     subtitle: "Beyond the Classroom Walls",
     description: "Extensive sports facilities, performing arts studios, fine arts workshops, intra-mural competitions, and leadership expeditions.",
-    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop",
+    image: "https://kisaligarh.com/Other_images/new/b.jpg",
     link: "/co-curricular",
     badge: "Holistic Growth"
   },
   {
     id: "gallery",
-    title: "Campus Life",
+    title: "Gallery",
     subtitle: "Vibrant Moments & Achievements",
-    description: "5-acre pollution-free green campus featuring eco-gardens, amphitheatre, modern auditoriums, and smart learning centers.",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop",
+    description: "We encourage every student at School to express themselves creatively and learn to work collaboratively.",
+    image: "https://kisaligarh.com/Other_images/new/d.jpg",
     link: "/gallery",
-    badge: "5-Acre Campus"
+    badge: "Explore Gallery"
   }
 ];
 

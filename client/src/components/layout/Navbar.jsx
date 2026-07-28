@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Menu, X, ChevronDown, GraduationCap, CreditCard, UserPlus, 
+import {
+  Menu, X, ChevronDown, GraduationCap, CreditCard, UserPlus,
   Sparkles, Award, BookOpen, ShieldCheck, HeartHandshake, Phone, ArrowUpRight
 } from "lucide-react";
 import { Button } from "../ui/Button";
@@ -33,8 +33,8 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { 
-      name: "About KIS", 
+    {
+      name: "About KIS",
       path: "/about",
       submenu: [
         { title: "School Overview", desc: "Our 5-acre eco-friendly campus & philosophy", href: "/about#overview" },
@@ -43,8 +43,8 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
         { title: "Recognition & Awards", desc: "60+ National & International accolades", href: "/about#awards" }
       ]
     },
-    { 
-      name: "Academics", 
+    {
+      name: "Academics",
       path: "/academics",
       submenu: [
         { title: "Curriculum & Streams", desc: "CBSE aligned Primary, Middle & Senior Secondary", href: "/academics#curriculum" },
@@ -52,8 +52,8 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
         { title: "Student Council", desc: "Leadership roles & Roll of Honour", href: "/academics#council" }
       ]
     },
-    { 
-      name: "Admissions", 
+    {
+      name: "Admissions",
       path: "/admissions",
       submenu: [
         { title: "Admission Process", desc: "Step-by-step registration & guidelines", href: "/admissions#process" },
@@ -91,12 +91,12 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
       {/* Floating Main Navbar */}
       <header className={`sticky top-0 z-40 transition-all duration-300 ${isScrolled ? "py-3 bg-slate-950/95 backdrop-blur-xl border-b border-slate-800/80 shadow-2xl shadow-slate-950/50" : "py-4 bg-slate-950/90 backdrop-blur-lg border-b border-slate-800/50 shadow-md shadow-slate-950/30"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center justify-between gap-4">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group shrink-0">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-emerald-400" />
+              <div className="w-10 h-10 rounded-xl p-0.5 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-full h-full rounded-[10px] flex items-center justify-center">
+                  <img src="https://kisaligarh.com/school_logo/KIS%20Logo.png" className="w-10 h-10" />
                 </div>
               </div>
               <div className="flex flex-col">
@@ -112,19 +112,18 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5">
               {navLinks.map((link) => (
-                <div 
-                  key={link.name} 
+                <div
+                  key={link.name}
                   className="relative shrink-0"
                   onMouseEnter={() => link.submenu && setActiveDropdown(link.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <Link
                     to={link.path}
-                    className={`px-2.5 xl:px-3.5 py-2 text-xs xl:text-sm font-medium rounded-full transition-colors flex items-center gap-1 whitespace-nowrap ${
-                      location.pathname === link.path 
-                        ? "text-emerald-400 bg-emerald-500/10 font-semibold" 
-                        : "text-slate-300 hover:text-white hover:bg-white/5"
-                    }`}
+                    className={`px-2.5 xl:px-3.5 py-2 text-xs xl:text-sm font-medium rounded-full transition-colors flex items-center gap-1 whitespace-nowrap ${location.pathname === link.path
+                      ? "text-emerald-400 bg-emerald-500/10 font-semibold"
+                      : "text-slate-300 hover:text-white hover:bg-white/5"
+                      }`}
                   >
                     {link.name}
                     {link.submenu && <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === link.name ? "rotate-180 text-emerald-400" : "text-slate-500"}`} />}
@@ -181,18 +180,18 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
 
             {/* Desktop Action Buttons */}
             <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
-              <Button 
-                variant="glass" 
-                size="sm" 
+              <Button
+                variant="glass"
+                size="sm"
                 icon={CreditCard}
                 onClick={onOpenFeeModal}
                 className="whitespace-nowrap"
               >
                 Pay Fee
               </Button>
-              <Button 
-                variant="primary" 
-                size="sm" 
+              <Button
+                variant="primary"
+                size="sm"
                 icon={UserPlus}
                 onClick={onOpenEnrollModal}
                 className="whitespace-nowrap"
@@ -230,11 +229,10 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
                 <div key={link.name} className="flex flex-col gap-1">
                   <Link
                     to={link.path}
-                    className={`py-2.5 px-4 text-base font-semibold rounded-xl transition-colors ${
-                      location.pathname === link.path
-                        ? "text-emerald-400 bg-emerald-500/10"
-                        : "text-slate-200 hover:bg-slate-900"
-                    }`}
+                    className={`py-2.5 px-4 text-base font-semibold rounded-xl transition-colors ${location.pathname === link.path
+                      ? "text-emerald-400 bg-emerald-500/10"
+                      : "text-slate-200 hover:bg-slate-900"
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -269,9 +267,9 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
               ))}
 
               <div className="pt-4 border-t border-slate-800 flex flex-col gap-3">
-                <Button 
-                  variant="glass" 
-                  size="md" 
+                <Button
+                  variant="glass"
+                  size="md"
                   icon={CreditCard}
                   className="w-full justify-center"
                   onClick={() => {
@@ -281,9 +279,9 @@ export const Navbar = ({ onOpenFeeModal, onOpenEnrollModal }) => {
                 >
                   Pay Fee Online
                 </Button>
-                <Button 
-                  variant="primary" 
-                  size="md" 
+                <Button
+                  variant="primary"
+                  size="md"
                   icon={UserPlus}
                   className="w-full justify-center"
                   onClick={() => {

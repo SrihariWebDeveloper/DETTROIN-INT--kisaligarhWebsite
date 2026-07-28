@@ -1,31 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  Sparkles, Play, ArrowRight, CheckCircle2, ShieldCheck, Trophy, 
+import {
+  Sparkles, Play, ArrowRight, CheckCircle2, ShieldCheck, Trophy,
   Users, BookOpen, Trees, FlaskConical, Palette, UserCheck, CreditCard, UserPlus, Heart
 } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { Badge } from "../components/ui/Badge";
 import { GlassCard } from "../components/ui/GlassCard";
-import { 
-  KIS_INFO, KIS_STATS, KIS_PILLARS, CAMPUS_HIGHLIGHTS, LEADERSHIP_MESSAGES 
+import {
+  KIS_INFO, KIS_STATS, KIS_PILLARS, CAMPUS_HIGHLIGHTS, LEADERSHIP_MESSAGES
 } from "../data/kisData";
 
 export const HomePage = ({ onOpenFeeModal, onOpenEnrollModal, onOpenVideoModal }) => {
   const [activeLeader, setActiveLeader] = useState("chairman");
 
   const heroPhotos = [
-    "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop"
+    "https://kisaligarh.com/indextopphoto/2023/website%201.jpg",
+    "https://kisaligarh.com/indextopphoto/2023/website%202.jpg",
+    "https://kisaligarh.com/indextopphoto/2023/website%203.jpg",
+    "https://kisaligarh.com/indextopphoto/2023/website%204.jpg",
+    "https://kisaligarh.com/indextopphoto/2023/website%205.jpg"
   ];
 
   return (
     <div className="space-y-24 pb-20">
-      
+
       {/* 1. Hero Section inspired by Apple, Vercel & Framer */}
       <section className="relative pt-12 md:pt-20 lg:pt-28 overflow-hidden">
         {/* Background Gradients & Ambient Glows */}
@@ -34,7 +34,7 @@ export const HomePage = ({ onOpenFeeModal, onOpenEnrollModal, onOpenVideoModal }
         <div className="absolute top-1/2 right-10 w-80 h-80 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          
+
           {/* Top Pill Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -121,9 +121,6 @@ export const HomePage = ({ onOpenFeeModal, onOpenEnrollModal, onOpenVideoModal }
                   alt={`KIS Campus Life ${index + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                  <span className="text-xs font-semibold text-emerald-300">Campus View #{index + 1}</span>
-                </div>
               </div>
             ))}
           </motion.div>
@@ -149,7 +146,7 @@ export const HomePage = ({ onOpenFeeModal, onOpenEnrollModal, onOpenVideoModal }
       {/* 3. About KIS Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Text Content */}
           <div className="lg:col-span-6 space-y-6">
             <div className="inline-flex items-center gap-2">
@@ -303,21 +300,19 @@ export const HomePage = ({ onOpenFeeModal, onOpenEnrollModal, onOpenVideoModal }
         <div className="flex justify-center gap-4 mb-8">
           <button
             onClick={() => setActiveLeader("chairman")}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
-              activeLeader === "chairman"
-                ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
-                : "bg-slate-900 text-slate-400 hover:text-white"
-            }`}
+            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${activeLeader === "chairman"
+              ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
+              : "bg-slate-900 text-slate-400 hover:text-white"
+              }`}
           >
             Chairman's Vision
           </button>
           <button
             onClick={() => setActiveLeader("principal")}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
-              activeLeader === "principal"
-                ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
-                : "bg-slate-900 text-slate-400 hover:text-white"
-            }`}
+            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${activeLeader === "principal"
+              ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
+              : "bg-slate-900 text-slate-400 hover:text-white"
+              }`}
           >
             Principal's Desk
           </button>

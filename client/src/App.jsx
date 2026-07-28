@@ -12,7 +12,6 @@ import { EventsPage } from "./pages/EventsPage";
 import { GalleryPage } from "./pages/GalleryPage";
 import { JoinUsPage } from "./pages/JoinUsPage";
 
-// Helper component to scroll to top on route change
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
@@ -39,7 +38,7 @@ export function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-[#070a0f] text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-300">
-        
+
         {/* Navigation Bar */}
         <Navbar
           onOpenFeeModal={() => setFeeModalOpen(true)}
