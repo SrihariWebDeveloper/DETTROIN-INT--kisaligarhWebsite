@@ -12,6 +12,8 @@ import {
   KIS_INFO, KIS_STATS, KIS_PILLARS, CAMPUS_HIGHLIGHTS, LEADERSHIP_MESSAGES
 } from "../data/kisData";
 
+import Notification from "../components/ui/Notification.jsx";
+
 export const HomePage = ({ onOpenFeeModal, onOpenEnrollModal, onOpenVideoModal }) => {
   const [activeLeader, setActiveLeader] = useState("chairman");
 
@@ -103,6 +105,12 @@ export const HomePage = ({ onOpenFeeModal, onOpenEnrollModal, onOpenVideoModal }
               Pay School Fee
             </Button>
           </motion.div>
+
+          {/* Naotifaction */}
+          <div className="mt-4 border-amber-50 shadow-2xl">
+           <Notification/> 
+          </div>
+          
 
           {/* Hero Image Showcase Grid */}
           <motion.div
